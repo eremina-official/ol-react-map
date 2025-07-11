@@ -7,3 +7,12 @@ Stack:
 - React
 - Vite
 
+Install vite with react-ts template, openlayers
+Add map with OSM layer
+Set controls, style controls
+Add vector layer with pin: Add Feature and Point, find coordinates (lon, lat), conivert coords to map default projection
+Update View with coordinates and zoom level
+Center map to pin
+
+TODO:
+Set page title
