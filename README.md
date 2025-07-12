@@ -1,5 +1,7 @@
 # Simple map
 
+Demo: [https://eremina-official.github.io/ol-react-map/](https://eremina-official.github.io/ol-react-map/)
+
 This project shows how to add a simple map with location pin to a webpage.
 
 Stack:
