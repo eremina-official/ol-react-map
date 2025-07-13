@@ -33,7 +33,7 @@ body {
 }
 
 .content {
-  max-width: 1280px;
+  max-width: 1280px; /* remember to set width for map container for map to show up */
   min-height: 100vh;
   margin: 0 auto;
   padding: 20px;

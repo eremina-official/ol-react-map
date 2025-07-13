@@ -13,11 +13,17 @@ import type { Coordinate } from 'ol/coordinate';
 
 const MAP = 'map' as const;
 
-const coordinates: Coordinate = fromLonLat([-0.118092, 51.509865]);
+// Longitude, Latitude for London
+const coordinatesLondon: [number, number] = [-0.118092, 51.509865];
+
+// Convert lon/lat coordinate to OpenLayers default coordinate system
+const coordinates: Coordinate = fromLonLat(coordinatesLondon);
+
 const feature: Feature<Point> = new Feature({
   geometry: new Point(coordinates),
 });
 
+// Layer for the location pin icon
 const vectorLayer = new VectorLayer({
   source: new VectorSource({
     features: [feature],
@@ -25,11 +31,12 @@ const vectorLayer = new VectorLayer({
   style: new Style({
     image: new Icon({
       src: reactSvg,
-      anchor: [0.5, 1], // Adjust the anchor point to center the icon
+      anchor: [0.5, 1],
     }),
   }),
 });
 
+// The basic map layer using OpenStreetMap
 const OSMLayer = new TileLayer({
   source: new OSM(),
 });
@@ -37,12 +44,14 @@ const OSMLayer = new TileLayer({
 const MapElement: React.FC = () => {
   useEffect(() => {
     // Initialize the map when the component mounts
+    // to make sure the element with id 'map' is in the DOM
     const map = new Map({
-      target: MAP,
+      target: MAP, // id of the map container
       view: new View({
         center: coordinates,
         zoom: 12,
       }),
+      // layers order matters for the vectorLayer to be on top
       layers: [OSMLayer, vectorLayer],
       controls: [new Zoom()],
     });
@@ -55,7 +64,7 @@ const MapElement: React.FC = () => {
 
   return (
     <div className="mapContainer">
-      <div id={MAP}></div>
+      <div id={MAP}></div> {/* Map container */}
       <div className="attribution">
         © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
       </div>
