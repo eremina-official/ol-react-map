@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="main">
       <div className="content">
-        <h1>Simple Map</h1>
+        <h1>Simple Map test</h1>
         <p>
           This is a simple responsive map built using <b>OpenLayers</b> and <b>React</b>. No API key
           required for this map.
