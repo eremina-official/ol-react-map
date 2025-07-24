@@ -1,6 +1,5 @@
 {
   "name": "ol-react-map",
-  "homepage": "https://eremina-official.github.io/ol-react-map/",
   "main": "main.tsx",
   "private": true,
   "version": "0.0.0",
