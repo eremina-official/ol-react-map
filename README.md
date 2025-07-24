@@ -10,6 +10,9 @@ Stack:
 - TypeScript
 - Vite
 
+Hosted on GitHub Pages with `gh-pages`.
+To publish to GitHub Pages run: `npm run deploy`.
+
 Install vite with react-ts template, 
 Install openlayers, if you do not want to include ol to bundle, can use CDN
 Add map with OSM layer and center this on London. Find coords for London as lon,lat
